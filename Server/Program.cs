@@ -12,8 +12,8 @@ var app = builder.Build();
 var cnn = app.Configuration.GetConnectionString("DefaultConnection");
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment() || app.Environment.IsEnvironment("Express"))
-{
+if (app.Environment.IsDevelopment() || 
+    app.Environment.IsEnvironment("Express")) {
     app.UseWebAssemblyDebugging();
 }
 else
